@@ -15,7 +15,7 @@ function findAll(req, res) {
 }
 function findUserByName(req, res) {
     var name = req.param('fname');
-    var query = {studentName: name};
+    var query = { studentName: name };
     db.collection("users").find(query).toArray(function (err, result) {
         if (err) throw err;
         console.log(result);
@@ -24,7 +24,7 @@ function findUserByName(req, res) {
 }
 function findRole(req, res) {
     var roleP = req.params.role;
-    var query = {role: roleP};
+    var query = { role: roleP };
     db.collection("users").find(query).toArray(function (err, result) {
         if (err) throw err;
         console.log(result);
